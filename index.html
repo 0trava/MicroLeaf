@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Довідник з мікрозелені — Користь та рецепти</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+
+    <header class="bg-white border-b border-stone-200 sticky top-0 z-50 backdrop-blur-md bg-white/90">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-seedling text-emerald-600 text-2xl"></i>
+                <span class="text-xl font-bold tracking-tight text-stone-900">Еко-Довідник Свіжості</span>
+            </div>
+            <p class="text-xs text-stone-500 text-center sm:text-right">Інформаційна сторінка підтримки клієнтів</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        
+        <div class="bg-emerald-900 text-emerald-50 p-6 rounded-2xl shadow-xs mb-8">
+            <h1 class="text-2xl font-bold mb-2">Вітаємо у світі суперфудів!</h1>
+            <p class="text-sm text-emerald-200 leading-relaxed">
+                Ви придбали живу мікрозелень. Це концентрат вітамінів, де кількість корисних речовин у 40 разів вища, ніж у дорослих рослинах. Оберіть вашу зелень нижче, щоб дізнатися про її властивості та знайти ідеальні рецепти.
+            </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mb-8 bg-stone-200/60 p-1.5 rounded-xl">
+            <button onclick="showTabs('goroh')" id="btn-goroh" class="nav-btn flex-1 min-w-[120px] text-center px-4 py-3 rounded-lg font-bold text-sm transition cursor-pointer">Горох</button>
+            <button onclick="showTabs('soniashnyk')" id="btn-soniashnyk" class="nav-btn flex-1 min-w-[120px] text-center px-4 py-3 rounded-lg font-bold text-sm transition cursor-pointer">Соняшник</button>
+            <button onclick="showTabs('rukola')" id="btn-rukola" class="nav-btn flex-1 min-w-[120px] text-center px-4 py-3 rounded-lg font-bold text-sm transition cursor-pointer">Рукола</button>
+            <button onclick="showTabs('chia')" id="btn-chia" class="nav-btn flex-1 min-w-[120px] text-center px-4 py-3 rounded-lg font-bold text-sm transition cursor-pointer">Чіа</button>
+            <button onclick="showTabs('kres')" id="btn-kres" class="nav-btn flex-1 min-w-[120px] text-center px-4 py-3 rounded-lg font-bold text-sm transition cursor-pointer">Крес-салат</button>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl flex gap-3 items-start mb-8">
+            <i class="fa-solid fa-triangle-exclamation text-amber-600 text-lg mt-0.5"></i>
+            <div class="text-xs sm:text-sm text-amber-900">
+                <strong class="font-bold">Головне кулінарне правило:</strong> Мікрозелень споживають <span class="underline font-bold">виключно сирою</span>! Під впливом термічної обробки (варіння, смаження) руйнуються майже всі вітаміни, ферменти, а сама зелень миттєво втрачає текстуру та аромат. Додавайте її в тарілку в останню секунду перед споживанням.
+            </div>
+        </div>
+
+        <div id="info-goroh" class="content-section bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-xs space-y-8">
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&q=80&w=400" alt="Горох" class="w-full md:w-48 h-48 object-cover rounded-2xl">
+                <div class="space-y-2">
+                    <h2 class="text-2xl font-black text-stone-900">Мікрозелень Гороху</h2>
+                    <p class="text-emerald-700 font-semibold text-sm flex items-center gap-1.5"><i class="fa-solid fa-ice-cream"></i> Смак: Свіжий, солодкуватий смак молодого зеленого горошку</p>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Має дуже соковиту, ніжну та приємно хрустку структуру. Чудово підходить дітям завдяки природній солодкості. Багата протеїнами, клітковиною та вітамінами групи B.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-stone-900 flex items-center gap-2"><i class="fa-solid fa-chart-simple text-emerald-600"></i> Харчова цінність та КБЖУ (на 100 г)</h3>
+                <div class="overflow-x-auto border border-stone-200 rounded-xl">
+                    <table class="w-full text-sm text-left text-stone-600">
+                        <thead class="bg-stone-50 text-stone-700 font-bold border-b border-stone-200">
+                            <tr>
+                                <th class="px-4 py-2.5">Параметр</th>
+                                <th class="px-4 py-2.5">Значення</th>
+                                <th class="px-4 py-2.5">% від норми (РДП)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-100">
+                            <tr><td class="px-4 py-2 font-medium text-stone-900">Калорійність</td><td class="px-4 py-2">124 ккал</td><td class="px-4 py-2 text-stone-500">8.22%</td></tr>
+                            <tr><td class="px-4 py-2 font-medium text-stone-900">Білки</td><td class="px-4 py-2">8.8 г</td><td class="px-4 py-2 text-stone-500">9.67%</td></tr>
+                            <tr><td class="px-4 py-2 font-medium text-stone-900">Жири</td><td class="px-4 py-2">0.7 г</td><td class="px-4 py-2 text-stone-500">1.06%</td></tr>
+                            <tr><td class="px-4 py-2 font-medium text-stone-900">Вуглеводи</td><td class="px-4 py-2">27.1 г</td><td class="px-4 py-2 text-stone-500">19.64%</td></tr>
+                            <tr><td class="px-4 py-2 font-medium text-stone-700">Вітамін B1 (Тіамін)</td><td class="px-4 py-2">Концентрований</td><td class="px-4 py-2 font-bold text-emerald-600">147%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-bold text-lg text-stone-900 flex items-center gap-2"><i class="fa-solid fa-utensils text-emerald-600"></i> З чим поєднувати та як готувати</h3>
+                <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-bread-slice"></i> Ідея для сніданку</h4>
+                        <p class="text-stone-600"><strong>Авокадо-тост:</strong> Підсмажте скибку цільнозернового хліба, розімніть стигле авокадо, додайте краплю лимонного соку, сіль, яйце пашот, а зверху рясно прикрасьте пишною жменею мікрозелені гороху.</p>
+                    </div>
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-bowl-rice"></i> Салати та Супи</h4>
+                        <p class="text-stone-600"><strong>Крем-супи:</strong> Безпосередньо перед подачею гарячого гарбузового або сочевичного крем-супу покладіть свіжі паростки гороху прямо в тарілку — вони збережуть хрускіт.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="info-soniashnyk" class="content-section bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-xs space-y-8">
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&q=80&w=400" alt="Соняшник" class="w-full md:w-48 h-48 object-cover rounded-2xl">
+                <div class="space-y-2">
+                    <h2 class="text-2xl font-black text-stone-900">Мікрозелень Соняшника</h2>
+                    <p class="text-emerald-700 font-semibold text-sm flex items-center gap-1.5"><i class="fa-solid fa-ice-cream"></i> Смак: М'який, горіховий з легкою приємною гірчинкою</p>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Найбільш м'ясиста і соковита зелень з усіх видів. Має виражений посмак свіжого насіння. Це потужне джерело рослинного білка, заліза та цинку. Дуже ситна.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-stone-900 flex items-center gap-2"><i class="fa-solid fa-chart-simple text-emerald-600"></i> Харчова цінність (на 100 г)</h3>
+                <div class="overflow-x-auto border border-stone-200 rounded-xl">
+                    <table class="w-full text-sm text-left text-stone-600">
+                        <thead class="bg-stone-50 text-stone-700 font-bold border-b border-stone-200">
+                            <tr>
+                                <th class="px-4 py-2.5">Параметр</th>
+                                <th class="px-4 py-2.5">Значення</th>
+                                <th class="px-4 py-2.5">% від норми (РДП)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-100">
+                            <tr><td class="px-4 py-2 font-medium text-stone-900">Калорійність</td><td class="px-4 py-2">309 ккал</td><td class="px-4 py-2 text-stone-500">20.48%</td></tr>
+                            <tr><td class="px-4 py-2 font-medium text-stone-900">Білки</td><td class="px-4 py-2">9.7 г</td><td class="px-4 py-2 text-stone-500">10.66%</td></tr>
+                            <tr><td class="px-4 py-2 font-medium text-stone-900">Жири</td><td class="px-4 py-2">28 г</td><td class="px-4 py-2 text-stone-500">42.42%</td></tr>
+                            <tr><td class="px-4 py-2 font-medium text-stone-900">Вуглеводи</td><td class="px-4 py-2">2.1 г</td><td class="px-4 py-2 text-stone-500">1.52%</td></tr>
+                            <tr><td class="px-4 py-2 font-medium text-stone-700">Кремній (Si) / Магній (Mg)</td><td class="px-4 py-2">Надвисокий вміст</td><td class="px-4 py-2 font-bold text-emerald-600">327% / 105%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-bold text-lg text-stone-900 flex items-center gap-2"><i class="fa-solid fa-utensils text-emerald-600"></i> Варіанти кулінарного використання</h3>
+                <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-apple-whole"></i> Корисний перекус</h4>
+                        <p class="text-stone-600">Завдяки щільній структурі паростки соняшника — одна з небагатьох різновидів мікрозелені, яку неймовірно смачно їсти просто окремо, як корисні живі снеки протягом дня.</p>
+                    </div>
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-burger"></i> Основа для салатів та сендвічів</h4>
+                        <p class="text-stone-600"><strong>М'ясні страви:</strong> Використовуйте замість звичайного листя салату в бургерах, сендвічах чи лавашах із запеченою куркою чи м'яким сиром сулугуні.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="info-rukola" class="content-section bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-xs space-y-8">
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&q=80&w=400" alt="Рукола" class="w-full md:w-48 h-48 object-cover rounded-2xl">
+                <div class="space-y-2">
+                    <h2 class="text-2xl font-black text-stone-900">Мікрозелень Руколи</h2>
+                    <p class="text-emerald-700 font-semibold text-sm flex items-center gap-1.5"><i class="fa-solid fa-ice-cream"></i> Смак: Яскравий, горіхово-гірчичний, пікантний</p>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Смак набагато концентрованіший, ніж у дорослої руколи. Надає стравам вишуканого італійського акценту. Покращує обмін речовин та є природним джерелом йоду й антиоксидантів.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-bold text-lg text-stone-900 flex items-center gap-2"><i class="fa-solid fa-utensils text-emerald-600"></i> Гастрономічні ідеї</h3>
+                <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-pizza-slice"></i> Італійські страви</h4>
+                        <p class="text-stone-600"><strong>Піца та паста:</strong> Обов'язково посипайте гарячу піцу або пасту великою кількістю мікроруколи безпосередньо перед подачею на стіл.</p>
+                    </div>
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-cheese"></i> Гурман-салат</h4>
+                        <p class="text-stone-600">Прекрасно поєднується з томатами черрі, сиром моцарела або дорблю, кедровими горішками та декількома краплями густого бальзамічного соусу.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="info-chia" class="content-section bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-xs space-y-8">
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=400" alt="Чіа" class="w-full md:w-48 h-48 object-cover rounded-2xl">
+                <div class="space-y-2">
+                    <h2 class="text-2xl font-black text-stone-900">Мікрозелень Чіа</h2>
+                    <p class="text-emerald-700 font-semibold text-sm flex items-center gap-1.5"><i class="fa-solid fa-ice-cream"></i> Смак: Дуже ніжний, нейтральний, трав'янисто-горіховий</p>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Має надзвичайно тонку і делікатну текстуру. Оскільки вона нейтральна на смак, вона не перебиває інші інгредієнти, але насичує страву Омега-3 жирними кислотами та кальцієм.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-bold text-lg text-stone-900 flex items-center gap-2"><i class="fa-solid fa-utensils text-emerald-600"></i> Як додавати до раціону</h3>
+                <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-blender"></i> Вітамінні смузі та йогурти</h4>
+                        <p class="text-stone-600">Ідеальний невідчутний компонент для ранкових зелених смузі на основі банана, ківі, шпинату чи корисних йогуртів та граноли.</p>
+                    </div>
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-seedling"></i> Легкі десерти</h4>
+                        <p class="text-stone-600">Ніжні гілочки чіа стануть чудовою вишуканою прикрасою для домашніх сирників, панкейків або фруктових фруктових салатів.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="info-kres" class="content-section bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-xs space-y-8">
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <img src="https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&q=80&w=400" alt="Крес-салат" class="w-full md:w-48 h-48 object-cover rounded-2xl">
+                <div class="space-y-2">
+                    <h2 class="text-2xl font-black text-stone-900">Мікрозелень Крес-салату</h2>
+                    <p class="text-emerald-700 font-semibold text-sm flex items-center gap-1.5"><i class="fa-solid fa-ice-cream"></i> Смак: Гострий, пікантний (нотки хрону, редьки чи гірчиці)</p>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Має тонку структуру, але дуже яскравий, бадьорий характер. Працює як повноцінна корисна спеція. Активізує травлення, багата на вітамін С та ефірні олії.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-bold text-lg text-stone-900 flex items-center gap-2"><i class="fa-solid fa-utensils text-emerald-600"></i> Поєднання, що вражають</h3>
+                <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-egg"></i> Ідеально з яйцями</h4>
+                        <p class="text-stone-600">Гострота крес-салату фантастично балансує ніжний яєчний жовток. Додавайте до класичної яєчні, омлетів чи яєць бенедикт.</p>
+                    </div>
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-100">
+                        <h4 class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-pepper-hot"></i> Пікантні соуси</h4>
+                        <p class="text-stone-600">Дрібно подрібніть ножицями паростки та вмішайте їх у густий грецький йогурт або сметану з сіллю. Вийде ідеальний соус для запеченої риби чи стейків.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center bg-stone-100 p-6 rounded-2xl border border-stone-200 space-y-3">
+            <p class="text-sm text-stone-600 font-medium">Виникли питання щодо вирощування чи замовлень?</p>
+            <a href="https://t.me/Sasha_M_a" target="_blank" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition shadow-xs">
+                <i class="fa-brands fa-telegram text-lg"></i> Зв'язатися в Telegram
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="bg-stone-900 text-stone-500 py-8 text-center text-xs mt-20 border-t border-stone-800">
+        <p>&copy; 2026 Справочник Микрозелени. Копирование материалов приветствуется во благо здоровья!</p>
+    </footer>
+
+    <script>
+        function showTabs(targetId) {
+            // Скрываем весь контент
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Сбрасываем стили кнопок на нейтральные
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-emerald-600', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-stone-700', 'hover:bg-stone-100');
+            });
+
+            // Показываем нужный контент
+            const activeSection = document.getElementById('info-' + targetId);
+            if(activeSection) {
+                activeSection.classList.add('active');
+            }
+            
+            // Подсвечиваем нужную кнопку
+            const activeBtn = document.getElementById('btn-' + targetId);
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-stone-700');
+                activeBtn.classList.add('bg-emerald-600', 'text-white', 'shadow-md');
+            }
+        }
+
+        // Автоматический выбор при загрузке страницы на основе URL Hash (для QR кодов)
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            const validHashes = ['goroh', 'soniashnyk', 'rukola', 'chia', 'kres'];
+            
+            if (hash && validHashes.includes(hash)) {
+                showTabs(hash);
+            } else {
+                // По умолчанию открываем горох
+                showTabs('goroh');
+            }
+        });
+    </script>
+</body>
+</html>
